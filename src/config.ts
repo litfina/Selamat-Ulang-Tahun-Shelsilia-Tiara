@@ -3,6 +3,9 @@
 // Semua konten personalisasi dikumpulkan di file ini
 // ============================================================
 
+// BASE_URL otomatis menyesuaikan: '/' di dev, '/nama-repo/' di GitHub Pages
+const base = import.meta.env.BASE_URL;
+
 export const CONFIG = {
   // Nama penerima
   recipientName: "Shelsilia Tiara",
@@ -15,42 +18,37 @@ export const CONFIG = {
 
   // Foto untuk galeri polaroid (minimal 2, maksimal sesuai kebutuhan)
   photos: [
-    "/photo1.jpg",
-    "/photo2.jpg",
-    "/photo3.jpg",
-    "/photo4.jpg",
+    `${base}photo1.jpg`,
+    `${base}photo2.jpg`,
+    `${base}photo3.jpg`,
+    `${base}photo4.jpg`,
   ],
 
   // Background foto untuk scene surat
-  letterBackground: "/letter-bg.jpg",
+  letterBackground: `${base}letter-bg.jpg`,
 
+  // Musik — file ada di public/music/
   musicPlaylist: [
     {
       title: "Selamat Ulang Tahun",
       artist: "Jamrud",
-      src: "/music/Selamat Ulang Tahun [Jamrud] - Sri Dyah Akilie (128k).mp3",
+      src: `${base}music/jamrud.mp3`,
     },
     {
       title: "Semua Aku Dirayakan",
       artist: "Nadin Amizah",
-      src: "/music/semua-aku-dirayakan.mp3",
+      src: `${base}music/nadin.mp3`,
     },
     {
       title: "You're Gonna Live Forever in Me",
       artist: "John Mayer",
-      src: "/music/John Mayer - You're Gonna Live Forever in Me (Audio) - John Mayer (128k).mp3",
+      src: `${base}music/johnmayer.mp3`,
     },
   ],
 
   // Teks surat
   letterTitle: "Untuk Shelsilia Tiara",
-  letterContent: `Di hari yang spesial ini, aku ingin kamu tahu betapa berartinya dirimu bagiku. Setiap senyummu adalah cahaya yang menerangi hariku, setiap tawamu adalah musik indah yang mengisi hidupku.
-
-Semoga di usiamu yang bertambah ini, kamu semakin menjadi pribadi yang luar biasa. Semoga semua impianmu perlahan menjadi nyata, semoga cinta dan kebahagiaan selalu menyertaimu di setiap langkah.
-
-Aku bersyukur bisa mengenalmu, bersyukur atas setiap momen indah yang telah kita lewati bersama. Kamu adalah hadiah terindah yang pernah kumiliki.
-
-Selamat ulang tahun, sayangku. Aku mencintaimu, hari ini, esok, dan selamanya.`,
+  letterContent: `Di hari yang spesial ini, aku ingin kamu tahu betapa berartinya dirimu bagiku. Setiap senyummu adalah cahaya yang menerangi hariku, setiap tawamu adalah musik indah yang mengisi hidupku.\n\nSemoga di usiamu yang bertambah ini, kamu semakin menjadi pribadi yang luar biasa. Semoga semua impianmu perlahan menjadi nyata, semoga cinta dan kebahagiaan selalu menyertaimu di setiap langkah.\n\nAku bersyukur bisa mengenalmu, bersyukur atas setiap momen indah yang telah kita lewati bersama. Kamu adalah hadiah terindah yang pernah kumiliki.\n\nSelamat ulang tahun, sayangku. Aku mencintaimu, hari ini, esok, dan selamanya.`,
   letterClosing: "Dengan segenap cintaku,",
   letterSender: "[Nama Kamu]",
 };
