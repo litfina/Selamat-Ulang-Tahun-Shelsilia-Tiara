@@ -5,7 +5,10 @@ import { inspectAttr } from 'kimi-plugin-inspect-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  // base disesuaikan untuk GitHub Pages: /nama-repo/
+  base: process.env.NODE_ENV === 'production'
+    ? '/Selamat-Ulang-Tahun-Shelsilia-Tiara/'
+    : './',
   plugins: [inspectAttr(), react()],
   server: {
     port: 3000,
@@ -16,3 +19,4 @@ export default defineConfig({
     },
   },
 });
+
